@@ -1,0 +1,38 @@
+<div class = "main-content">
+    <div class = "header-content address-header">
+        <div class = "emp-detail-text">
+            <button class ="add-button" (click)="onAddperson()"><img src=""/> Add Person </button>
+        </div>
+        <div class ="table-main">
+            <table id ="table-display" class="table">
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            <tr *ngFor="let add of person.data">
+                <td>{{add.Id}}</td>
+                <td>{{add.FirstName }}</td>
+                <td>{{add.LastName }}</td>
+                <td>{{add.City}}</td>
+                <td>{{add.State}}</td>
+                <td>{{add.Zip}}</td>
+                <td>{{add.Email}}</td>
+                <td>{{add.Phone}}</td>
+
+                <!--To update and delete an record from the database-->
+                <td>
+                    <img src="../assets/delete.svg" alt="delete" (click)="deleteAddress(add.Id)">
+                    &nbsp;
+                
+                    <img src="../assets/edit.svg" alt="edit" (click)="editAddress(add.Id)">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
