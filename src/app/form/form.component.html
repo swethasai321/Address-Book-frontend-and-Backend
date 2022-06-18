@@ -102,8 +102,8 @@
             
         </div>
                         <div class="buttons-contact">
-                            <button type="button" class="button button-update" id="updateButton" (click)="onDashboard()">update</button>
-                            <button type="button" class="button button-submit" id="submitButton" (click)="onAdd()">Add</button>
+                            <button type="button" class="button button-update" id="updateButton" *ngIf='this.Id!==null' (click)="onupdate()">update</button>
+                            <button type="button" class="button button-submit" id="submitButton" *ngIf='this.Id==null' (click)="onAdd()">Add</button>
                           <button type="button" class="button button-cancel" id="cancelButton"(click)="onDashboard()">Cancel</button>
                             
                           </div>
